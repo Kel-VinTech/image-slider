@@ -1,0 +1,48 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgb(6, 12, 31);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    perspective: 100rem;
+}
+
+.carousel__cards{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    transform-style: preserve-3d;
+    transform: translateZ(-25rem);
+    transition: transform .3s ease-in;
+}
+
+.carousel__card{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: .2rem;
+    font-size: 3em;
+    font-weight: 700;
+}
